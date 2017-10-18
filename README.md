@@ -1,81 +1,77 @@
-# OperationCode Frontend
+# ✨ :us: OperationCode Frontend :us: ✨
 
-This is OperationCode.org's repository for their new front-end implementation using React.js
+-------
 
+[![Build Status](https://travis-ci.org/OperationCode/operationcode_frontend.svg?branch=master)](https://travis-ci.org/OperationCode/operationcode_frontend)
+[![PRs Welcome][prs-badge]][prs]
 
-## Table of Contents
+[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=social-square
+[prs]: http://makeapullrequest.com
 
-- [Technologies](#technologies)
-- [Resources Used](#resources-used)
-- [Install](#install)
-- [Contents](#contents)
-- [Contribute](#contribute)
-- [License](#license)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Twitter Follow](https://img.shields.io/twitter/follow/operation_code.svg?style=social&label=Follow&style=social)](https://twitter.com/operation_code)
 
+This is the repository for the front-end portion of https://operationcode.org.
 
-## Technologies
+## Hacktoberfest
 
-- [React.js](https://facebook.github.io/react/) - Facebook's popular JavaScript front-end framework.
-- [Create-React-App](https://github.com/facebookincubator/create-react-app) - Facebook's generator (think boilerplate, but more) in response to critique of React being difficult to learn.
-- [Webpack](https://webpack.js.org/) - Webpack acts as a module bundler and almost entirely dispenses with the need for a task runner, like Grunt or Gulp.
-- [Babel](https://babeljs.io/) - JavaScript compiler to unify all the different versions of JS that may have been used or will be used in the future.
-- [Yarn](https://yarnpkg.com/) - Facebook's open source JavaScript package manager. There are a few differences between Yarn and Node Package Mangaer (npm), but the main differentiation is that Yarn locks dependencies so your project doesn't break when external resources change their code.
-- [npm](https://www.npmjs.com/) - While Yarn is handling our projects dependencies, we still use npm to run scripts as you'll see further below.
-- [Sass](http://sass-lang.com) - CSS Preprocessors make stylesheets faster to develop and easier to maintain.
+If you're here looking for a place to contribute pull requests as part of GitHub's "Hacktoberfest", you're in the right place! Please look forward to an increased amount of documentation and tickets. We highly recommend joining our organization at operationcode.org to receive an invite to our Slack team. From there, you'll join the `#oc-projects` channel. You can get help from multiple professional developers and people who have worked on the application since day 1! Happy hacking!
 
+### Quick Start
 
-## Resources Used
+#### TLDR
 
-- [Learning React With Create-React-App](https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-1-a12e1833fdc)
-- [What Is Webpack?](https://survivejs.com/webpack/what-is-webpack/)
-- [Routed React with Express.js and Docker](https://medium.com/@patriciolpezjuri/using-create-react-app-with-react-router-express-js-8fa658bf892d)
-- [React Lifecycle Methods - How And When To Use Them](https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1)
-- [Let's test React components with TDD< Mocha, Chai, and jsdom](https://medium.freecodecamp.com/simple-react-testing-d9e25ec87e2)
+Prerequisites:
 
+- [Yarn](https://yarnpkg.com/en/)
+- [Docker](https://www.docker.com/)
+- MacOS or Linux with a globally installed and available `git`
+- [For Windows User quick start installation](https://github.com/OperationCode/operationcode_frontend/blob/master/CONTRIBUTING.md#windows)
 
-## Install
-
-- `npm start` - This begins the development server.
-
-- `npm run build` - This bundles the application into static files for production (minimization, post-processing, etc.)
-
-- `npm test` - This starts the test runner.
-
-
-## Contents
 ```
-├── README.md
-├── LICENSE
-├── index.html
-├── package.json
-├── public
-│   ├── favicon.ico
-│   └── index.html
-├── src
-│   ├── App.css
-│   ├── App.js
-│   ├── App.test.js
-│   ├── images
-│   │   └── logos
-│   ├── index.css
-│   ├── index.js
-│   ├── logo.svg
-│   ├── scripts
-│   │   └── src
-│   └── styles
-│       ├── css
-│       ├── ie8.css
-│       ├── ie9.css
-│       └── scss
-└── yarn.lock
-```  
+yarn
+```
 
+```
+yarn run backend
+```
+If the command doesn't work the first time, run it again.
 
-## Contribute
+In another shell tab:
+```
+yarn start
+```
 
-[Operation Code Contribution Guide](https://github.com/OperationCode/START_HERE)
+If you're an experienced developer, please navigate to our [Quick Start Guide](https://github.com/OperationCode/operationcode_frontend/blob/master/CONTRIBUTING.md#quick-start-guide).
 
+### What is a frontend?
+When you visit our website you're interacting with two systems, a frontend application and a backend application. The frontend application (where you are now) is responsible for displaying images, text and data on our web pages.
+Frontend applications are usually written using a combination of HTML, CSS, and Javascript and utilize one or more frameworks such as Angular, Backbone, Vue, and React. https://operationcode.org uses React.
 
-## License
+### What is a backend?
+The backend is responsible for providing data to the front end to display, and processing data entered into the frontend, and running various jobs like inviting new users to Slack, or signing them up for our newsletter. The https://operationcode.org backend is written in Rails and can be viewed at https://github.com/OperationCode/operationcode_backend.
 
-[MIT](LICENSE) © OperationCode
+Our backend API blueprint can be found here
+
+### Mocking Backend Server API
+
+We are using [Apiary.io](http://docs.operationcodeapi.apiary.io) for our Backend documentation. It also includes a Mocking Server so you don't have to stand up the whole backend. You just need to hit the Mock API endpoints for whatever it is you're testing.
+
+To use, navigate to [Apiary.io](http://docs.operationcodeapi.apiary.io).
+
+For example, you want to gather all CodeSchool Members. Click on `CodeSchool | Collection` on the left-hand side. Select `List All CodeSchool Members`.
+
+A form will populate. You can switch to an Example Code in the langauge of your choosing. More than likely it will be JavaScript on the front-end.
+
+In the dropdown menu, select `Mock Server` and click on `Try`.
+
+You will see a `GET` request with the mock endpoint url. You can now copy and paste that into your front-end to test your code.
+
+Don't forget to remove the mock endpoint url when committing your changes for production. Reset your values and select `Production` to get the correct endpoint url.
+
+### Contribute
+Want to contribute to this repo? Check out our comprehensive
+[Contributing Guide](https://github.com/OperationCode/operationcode_frontend/blob/master/CONTRIBUTING.md)
+
+### License
+This project is licensed under the terms of the MIT license.

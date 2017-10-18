@@ -1,0 +1,11 @@
+.socialMediaContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .socialMediaContainer {
+    flex-wrap: wrap;
+  }
+}

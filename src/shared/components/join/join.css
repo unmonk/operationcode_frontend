@@ -1,0 +1,15 @@
+.joinSection {
+  background-image: url('images/General-Military-Departing.jpg');
+}
+
+.join {
+  width:80%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.join p {
+  max-width:700px;
+  font-size:20px;
+  color:#47566B;
+}

@@ -1,0 +1,44 @@
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+* text=auto
+
+# source code
+*.css text
+*.js text
+*.json text
+*.html text
+*.svg text
+
+# git config
+.gitattributes text
+.gitignore text
+.gitconfig text
+
+
+# code analysis config
+.eslintrc text
+
+
+# misc config
+*.yml text
+.editorconfig text
+yarn.lock text
+.env
+*.xml text
+
+
+# Documentation
+*.md text
+LICENSE text
+
+
+# Binary Files
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.ttf binary
+*.eot binary
+*.woff binary
